@@ -21,7 +21,7 @@ flask run --host 0.0.0.0
 ```
 4. On Terminal 4, run `route_planner.py`
 ```
-export FLASK_APP=router_planner.py
+export FLASK_APP=route_planner.py
 export FLASK_ENV=development
 flask run --port=5002 --host 0.0.0.0
 ```
