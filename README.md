@@ -19,7 +19,7 @@ Go to `/webserver`, start your Redis server (if it is not already running, which
     export FLASK_DEBUG=1
     flask run --port=5001 --host 0.0.0.0
     ```
-2. Open a new termibal, go to `/webserver`, and run the route planner
+2. Open a new terminal, go to `/webserver`, and run the route planner
     ```
     export FLASK_APP=route_planner.py
     export FLASK_DEBUG=1
