@@ -8,7 +8,11 @@ import requests
 
 app = Flask(__name__)
 CORS(app, supports_credentials=True)
-redis_server = redis.Redis(host="localhost", port="6379")
+
+# change this so rhat you can connect to your redis server
+# ===============================================
+redis_server = redis.Redis("REDIS_SERVER")
+# ===============================================
 
 geolocator = Nominatim(user_agent="my_request")
 region = ", Lund, Skåne, Sweden"
@@ -22,7 +26,7 @@ def route_planner():
     FromAddress = Addresses['faddr']
     ToAddress = Addresses['taddr']
     
-    current_location = (redis_server.get('longitude').decode(), redis_server.get('latitude').decode())
+    current_location = (redis_server.get('longitude'), redis_server.get('latitude'))
     from_location = geolocator.geocode(FromAddress + region)
     to_location = geolocator.geocode(ToAddress + region)
     if from_location is None:
