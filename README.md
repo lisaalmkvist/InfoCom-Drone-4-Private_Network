@@ -31,7 +31,7 @@ Go to `/webserver`, start your Redis server (if it is not already running, which
     export FLASK_APP=build.py
     export FLASK_DEBUG=1
     flask run --host 0.0.0.0
-    ...
+    ```
 
 4.  Open a web browser (e.g. Chromium) on your Raspberry Pi and enter the following URL. You should see a map of Lund as in the previous assignment. Make sure you see a red dot representing the drone at the LTH location.
 
@@ -48,7 +48,7 @@ Go to `/pi`, run `drone.py`
 ```
 export FLASK_APP=drone.py
 export FLASK_DEBUG=1
-flask run  --host 0.0.0.0
+flask run --host 0.0.0.0
 ```
 
 
