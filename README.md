@@ -1,4 +1,4 @@
-# InfoCom Drone Project - Part 3 - Route Planning
+# InfoCom Drone Project - Part 4 - Configuring a Private Network
 Install required Python packages if not done already (you probably did this in the previous assignments):
 ```
 sudo apt update
