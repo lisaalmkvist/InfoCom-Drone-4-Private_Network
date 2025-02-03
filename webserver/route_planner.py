@@ -11,14 +11,14 @@ CORS(app, supports_credentials=True)
 
 # change this so rhat you can connect to your redis server
 # ===============================================
-redis_server = redis.Redis("REDIS_SERVER")
+redis_server = redis.Redis(host='localhost', port=6379)
 # ===============================================
 
 geolocator = Nominatim(user_agent="my_request")
 region = ", Lund, Skåne, Sweden"
 #================================================================
 #Put the IP address of your drone
-DRONE_URL = "http://DRONE_IP:5000"
+DRONE_URL = "http://192.168.1.50:5000"
 #================================================================
 @app.route('/planner', methods=['POST'])
 def route_planner():

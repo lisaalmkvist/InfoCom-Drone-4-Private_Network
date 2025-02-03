@@ -37,7 +37,7 @@ def run(current_coords, from_coords, to_coords, SERVER_URL):
             resp = session.post(SERVER_URL, json=drone_location)
    
 if __name__ == "__main__":
-    SERVER_URL = "http://WEBSERVER_IP:5001/drone"
+    SERVER_URL = "http://192.168.1.50:5001/drone"
 
     parser = argparse.ArgumentParser()
     parser.add_argument("--clong", help='current longitude of drone location' ,type=float)
